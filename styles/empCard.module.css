@@ -1,0 +1,125 @@
+.parent {
+    box-sizing: border-box;
+    width: 70rem;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    transition: all 0.2 linear;
+}
+
+.card {
+    margin: 20px 20px;
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: white;
+    color: black !important;
+}
+
+.company_logo {
+    width: 200px;
+    position: absolute;
+    top: 0.5rem;
+    right: 0rem;
+}
+
+.user_image {
+    position: absolute;
+    top: 1.25rem;
+    left: 0.625rem;
+    border-radius: 50%;
+    border: 3px white solid;
+}
+
+.bg_image {
+    background: url(/GradientIntense.png);
+    /* background: url(../../assets/images/GradientLight.png); */
+    /* background: linear-gradient(to left, #b6fbff, #83a4d4); */
+    /* background: linear-gradient(to right, #12FFF7, #B3FFAB); */
+    /* background: linear-gradient(to right, #aaffa9, #11ffbd); */
+
+    width: 25.5rem;
+    height: 3.75rem;
+}
+
+.details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    left: 9.375rem;
+    top: 4.3rem;
+}
+
+.addetails {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 70px;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+}
+
+.office {
+    display: flex;
+    flex-direction: column;
+}
+
+/* .contact{
+    position: relative;
+    bottom: -4.4rem;
+    justify-content: space-around;
+    display: flex;
+    flex-direction: row;
+}
+
+.office{
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    bottom: -5rem;
+} */
+
+.label {
+    color: black;
+    font-size: 1rem;
+}
+
+.name {
+    font-size: 1.2rem;
+    color: black;
+    font-weight: 500;
+}
+
+.blood {
+    font-weight: 600;
+    color: red;
+}
+
+.designation {
+    color: brown;
+}
+
+/* .email, .phone{
+    padding: 0 0 0 1rem;
+}
+
+.emailabel{
+    position: absolute;
+    top: 8rem;
+}
+
+.emailid{
+    position: absolute;
+    top: 9.5rem;
+}
+
+.phonelabel{
+    position: absolute;
+    top: 8rem;
+} */

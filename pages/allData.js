@@ -5,14 +5,16 @@ import axios from 'axios'
 import Head from 'next/head'
 import { useEffect, useState } from 'react'
 import styles from '../styles/Home.module.css'
-import {url} from './src/baseUrl'
+import EmpCard from '../template/EmpCard'
+import { url } from './src/baseUrl'
+
 
 const allData = () => {
 
     const getEmployee = () => {
         axios.get(`${url}/getEmployees`).then(
             (response) => {
-                console.log(response.data)
+                // console.log(response.data)
                 setEmployee(response.data)
             },
             (error) => {
@@ -35,13 +37,10 @@ const allData = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <div className={styles.container}>
-                <div className={styles.main}>
-                    <h2>All Data</h2>
-                    <div className={styles.grid}>
-                        {employee.map((emp) => (<div className={styles.card} key={emp.empID}><img src={emp.imageUrl} height={50} width={50} alt="" /><p>{emp.firstName}&nbsp;{emp.lastName}</p><p>{emp.emailId}</p></div>))}
-                    </div>
-                </div>
+            <div className={styles.parent}>
+                {/* {employee.map((emp) => (<div className={styles.card} key={emp.empID}><img src={emp.imageUrl} height={50} width={50} alt="" /><p>{emp.firstName}&nbsp;{emp.lastName}</p><p>{emp.emailId}</p></div>))} */}
+                {employee.map((emp) => (<EmpCard key={emp.empID} employees={emp} />))}
+                {/* <EmpCard key={employee.empID} employee={employee}/> */}
             </div>
         </>
     )
