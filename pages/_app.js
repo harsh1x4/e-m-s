@@ -4,7 +4,7 @@ import Sidebar from './components/Sidebar'
 function MyApp({ Component, pageProps }) {
   return <>
     <Sidebar />
-    <div style={{ width: "calc( 100vw - 15.625rem )", marginLeft: "15.625rem", padding: "10px" }}>
+    <div style={{ width: "calc( 100vw - 15.625rem )", marginLeft: "15.625rem", padding: "1.5rem 1rem" }}>
       <Component {...pageProps} />
     </div>
   </>
