@@ -39,7 +39,11 @@ const idCard = () => {
 
             <div className={styles.parent}>
                 {/* {employee.map((emp) => (<div className={styles.card} key={emp.empID}><img src={emp.imageUrl} height={50} width={50} alt="" /><p>{emp.firstName}&nbsp;{emp.lastName}</p><p>{emp.emailId}</p></div>))} */}
-                {employee.map((emp) => (<EmpCard key={emp.empID} employees={emp} />))}
+                {employee.map((emp) => {
+                    if (emp.status == "active") {
+                        return <EmpCard key={emp.empID} employees={emp} />;
+                    }
+                })}
                 {/* <EmpCard key={employee.empID} employee={employee}/> */}
             </div>
         </>

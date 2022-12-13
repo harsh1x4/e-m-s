@@ -65,7 +65,8 @@ const allData = () => {
                                 </td>
                             </td>
                             <td className="py-4 px-6">
-                                {emp.status}
+                                {/* <span className="py-2 px-4 badge-active rounded-full font-medium">{emp.status}</span> */}
+                                <span className={`py-2 px-3 ${emp.status=='active' ? 'badge_active' : emp.status=='onboarding' ? 'badge_onboarding' : 'badge_awaiting'} rounded-full font-medium`}>{emp.status}</span>
                             </td>
                             <td className="py-4 px-6">
                                 {emp.position}

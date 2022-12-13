@@ -22,6 +22,29 @@ a {
   box-sizing: border-box;
 }
 
+@layer utilities {
+  .badge_active {
+    /* background: #C7F5D9;
+    color: #0B4121; */
+    background: #d6f0e0;
+    color: #0d6832;
+  }
+
+  .badge_onboarding {
+    /* background: #D0F0FB; */
+    /* color: #084154; */
+    background: #dfe7f6;
+    color: #2c5db3;
+  }
+
+  .badge_awaiting {
+    /* background: #FFEBC2;
+    color: #453008; */
+    background: #fbf0da;
+    color: #775628;
+  }
+}
+
 /* ::-webkit-scrollbar-track {
   background: #161616;
 }
@@ -41,6 +64,7 @@ a {
   html {
     color-scheme: dark;
   }
+
   body {
     color: white;
     background: black;
