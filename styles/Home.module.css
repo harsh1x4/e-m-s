@@ -4,9 +4,9 @@
 
 .parent {
   box-sizing: border-box;
-  width: 70rem;
   margin: auto;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   transition: all 0.2 linear;
 }
