@@ -2,7 +2,7 @@
 
 This project is created using nextJS as frontend, and Spring-Boot as backend.
 
-### Backends
+## Backend
 
 In the ```server``` folder, there is a file named ```pushJSONToAPI```, which can be used to populate data on the server.
 
@@ -10,7 +10,7 @@ I have added the backend submodule created using ```Spring Boot```. The database
 
 Depending on what you have installed on your computer, you can use the ```pushJSONtoAPI``` with ```node``` or ```nodemon.``` 
 
-### Frontend
+## Frontend
 
 To get started with the frontend, you should have nodeJS installed on your computer so that you can install the required dependencies.
 
