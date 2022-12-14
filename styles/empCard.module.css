@@ -12,8 +12,9 @@
     position: relative;
     border-radius: 10px;
     overflow: hidden;
-    background-color: white;
-    color: black !important;
+    /* background-color: white; */
+    background-color: #222222;
+    color: #ffffff !important;
 }
 
 .company_logo {
@@ -28,7 +29,27 @@
     top: 1.25rem;
     left: 0.625rem;
     border-radius: 50%;
-    border: 3px white solid;
+    border: 3px #222222 solid;
+}
+
+.user_image:before {
+    position: absolute;
+    content: "\01F614";
+    background: #222222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 1em 0;
+    text-align: center;
+    border: 3px dashed #5f1ebe;
+    box-shadow: 0 0 0 0.45em , 0 1.2em 3.6em rgba(1, 7, 60, 0.3);
+    border-radius: 50%;
 }
 
 .bg_image {
@@ -87,13 +108,13 @@
 } */
 
 .label {
-    color: black;
+    color: rgba(255, 255, 255, 0.57);
     font-size: 1rem;
 }
 
 .name {
     font-size: 1.2rem;
-    color: black;
+    color: #ffffff;
     font-weight: 500;
 }
 
