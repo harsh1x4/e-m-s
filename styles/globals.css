@@ -38,10 +38,10 @@ a {
   }
 
   .badge_awaiting {
-    /* background: #FFEBC2;
-    color: #453008; */
+    /* background: #FFEBC2;*/
+    color: #453008; 
     background: #fbf0da;
-    color: #775628;
+    /* color: #775628; */
   }
 }
 

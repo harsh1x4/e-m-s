@@ -1,7 +1,8 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import { useState } from 'react'
 import styles from '../styles/Home.module.css'
-import { Radio } from '@nextui-org/react';
+import axios from 'axios';
+import { url } from './src/baseUrl'
 
 const createData = () => {
 
@@ -9,8 +10,20 @@ const createData = () => {
 
   const addEmployeeForm = (e) => {
     console.log(employee);
-
+    postData(employee)
     e.preventDefault();
+  }
+
+  const postData = (data) => {
+    axios.post(`${url}/registerEmployee`, data).then(
+      (response) => {
+        console.log(response)
+        console.log("Success")
+      },(error) => {
+        console.log(error)
+        onsole.log("Error")
+      }
+    )
   }
 
   return (
@@ -177,21 +190,21 @@ const createData = () => {
                 <div className="flex items-center mb-2">
                   <div className="flex items-center">
                     <input className="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600"
-                      type="radio" id="Active" name="status" value="Active" required onChange={(e) => {
+                      type="radio" id="Active" name="status" value="active" required onChange={(e) => {
                         setEmployee({ ...employee, status: e.target.value })
                       }} />
                     <label className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300" htmlFor="Active">Active</label>&nbsp;&nbsp;
                   </div>
                   <div className="flex items-center">
                     <input className="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600"
-                      type="radio" id="Onboarding" name="status" value="Onboarding" required onChange={(e) => {
+                      type="radio" id="Onboarding" name="status" value="onboarding" required onChange={(e) => {
                         setEmployee({ ...employee, status: e.target.value })
                       }} />
                     <label className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300" htmlFor="Onboarding">Onboarding</label>&nbsp;&nbsp;
                   </div>
                   <div className="flex items-center">
                     <input className="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600"
-                      type="radio" id="Awaiting" name="status" value="Awaiting" required onChange={(e) => {
+                      type="radio" id="Awaiting" name="status" value="awaiting" required onChange={(e) => {
                         setEmployee({ ...employee, status: e.target.value })
                       }} />
                     <label className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300" htmlFor="Awaiting">Awaiting</label>
@@ -234,10 +247,13 @@ const createData = () => {
               </div>
             </div>
 
-            <div className="flex items-center justify-between">
-              <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            <div className="flex items-center">
+              <button className="bg-blue-500 mr-2 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                 type="submit">
                 Add Employee
+              </button>
+              <button type="reset" className="bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                Clear
               </button>
             </div>
           </form>

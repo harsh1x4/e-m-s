@@ -2,7 +2,7 @@
 import styles from '../styles/empCard.module.css'
 
 const EmpCard = ({employees}) => {
-    console.log(employees)
+    // console.log(employees)
     return (
         <>
             <div className={styles.card}>
