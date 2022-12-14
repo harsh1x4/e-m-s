@@ -1,4 +1,4 @@
-### Employee-Management-System
+# Employee-Management-System
 
 This project is created using nextJS as frontend, and Spring-Boot as backend.
 
