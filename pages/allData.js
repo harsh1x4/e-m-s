@@ -133,7 +133,7 @@ const allData = () => {
                         {employee.map((emp, index) => (<tr key={emp.empID} className="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
                             <th scope="row" className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                 <div className="flex align-items-center">
-                                    <img src={emp.imageUrl} alt="" height="45px" width="45px" className="rounded-full" />
+                                    <img src={emp.imageUrl} alt="" height="45px" width="45px" className={` ${styles.bk_img} rounded-full`} />
                                     <div className="mx-3">
                                         <p className="fw-bold mb-1">{emp.firstName}&nbsp;{emp.lastName}</p>
                                         <p className="text-muted mb-0">{emp.emailId}</p>
